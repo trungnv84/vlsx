@@ -97,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="modal-body">
                 <!-- <p>Modal body text goes here.</p> -->
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger" role="alert" style="display:none">
                     Sorry, we couldn't find that combination of username, password.
                 </div>
                 <form>

@@ -237,7 +237,7 @@ require('common/head.php');
         <div class="row">
             <div class="col-xs-12 col-md-3">
                 <div class="news-detail">
-                    <span class="time">16/10/2016</span>
+                    <!-- <span class="time">16/10/2016</span> -->
                     <!-- <span class="topic">
                         <a href="/en/tin-tuc/news-winners/"> Winning news </a>
                     </span> -->
