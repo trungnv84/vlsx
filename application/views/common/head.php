@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign In</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#signInModal">Sign in</a>
                     </li>
                 </ul>
 
@@ -85,3 +85,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </nav>
     </div>
 </header>
+
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sign in</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- <p>Modal body text goes here.</p> -->
+                <div class="alert alert-danger" role="alert">
+                    Sorry, we couldn't find that combination of username, password.
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="signInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="signInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="signInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="signInputPassword1" placeholder="Password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Sign in</button>
+            </div>
+        </div>
+    </div>
+</div>
