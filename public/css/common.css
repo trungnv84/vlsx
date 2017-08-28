@@ -1,0 +1,56 @@
+a {
+    text-decoration: none;
+}
+
+header nav {
+    margin: auto;
+    max-width: 1346px;
+}
+
+#navbarMain .navbar-nav:nth-child(1) {
+    font-weight: bold;
+}
+
+header .flag {
+    height: 12px;
+}
+
+footer {
+    background: #ed1d27 url("/public/img/bg-foot.png") no-repeat scroll center top / cover ;
+    color: #fff;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+footer .ft-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0 35px;
+    vertical-align: top;
+}
+footer .ft-link a {
+    color: rgba(255, 255, 255, 0.75);
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+footer .ft-link a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+footer .ft-copyright {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+footer .porn-label {
+    padding: 10px 0 0;
+    text-align: center;
+}
+footer .porn-label span {
+    display: inline-block;
+    margin: 5px 0 0;
+}
+
