@@ -39,26 +39,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Play</a>
+                        <a class="nav-link" href="#"><?php echo lang('nav_play');?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Win</a>
+                        <a class="nav-link" href="#"><?php echo lang('nav_win');?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Responsibility</a>
+                        <a class="nav-link" href="#"><?php echo lang('nav_responsibility');?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
+                        <a class="nav-link" href="#"><?php echo lang('nav_news');?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Vietloot</a>
+                        <a class="nav-link" href="#"><?php echo lang('nav_about');?></a>
                     </li>
                 </ul>
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownLanguageMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="flag" src="https://lipis.github.io/flag-icon-css/flags/4x3/us.svg" alt="US">
+                            <?php switch(LanguageLoader::getCurrentLanguage('tiny')) {
+                                case 'en':
+                                    echo '<img class="flag" src="https://lipis.github.io/flag-icon-css/flags/4x3/us.svg" alt="US">';
+                                    break;
+                                case 'vi':
+                                    echo '<img class="flag" src="https://lipis.github.io/flag-icon-css/flags/4x3/vn.svg" alt="VN">';
+                                    break;
+                            }?>
                             Language
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownLanguageMenuLink">
@@ -73,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#signInModal">Sign in</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#signInModal"><?php echo lang('nav_signin');?></a>
                     </li>
                 </ul>
 
@@ -90,31 +97,64 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Sign in</h5>
+                <h5 class="modal-title"><?php echo lang('pop_signin');?></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <!-- <p>Modal body text goes here.</p> -->
-                <div class="alert alert-danger" role="alert" style="display:none">
-                    Sorry, we couldn't find that combination of username, password.
-                </div>
+                <div class="alert alert-danger" role="alert" style="display:none"></div>
                 <form>
                     <div class="form-group">
-                        <label for="signInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="signInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <label for="signInputEmail1"><?php echo lang('pop_email_address');?></label>
+                        <input type="email" class="form-control" id="signInputEmail1" aria-describedby="emailHelp" placeholder="<?php echo lang('pop_enter_email');?>">
                         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                     </div>
                     <div class="form-group">
-                        <label for="signInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="signInputPassword1" placeholder="Password">
+                        <label for="signInputPassword1"><?php echo lang('pop_password');?></label>
+                        <input type="password" class="form-control" id="signInputPassword1" placeholder="<?php echo lang('pop_enter_password');?>">
+                    </div>
+                    <div class="form-group">
+                        <a href="#" data-toggle="modal" data-target="#signUpModal" data-dismiss="modal">Register now!</a>
+                        <a href="" class="float-right">Forgot Your Password?</a>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Sign in</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo lang('pop_close');?></button>
+                <button type="button" class="btn btn-primary"><?php echo lang('pop_signin');?></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><?php echo lang('pop_signup');?></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger" role="alert" style="display:none"></div>
+                <form>
+                    <div class="form-group">
+                        <label for="signInputEmail2"><?php echo lang('pop_email_address');?></label>
+                        <input type="email" class="form-control" id="signInputEmail2" aria-describedby="emailHelp" placeholder="<?php echo lang('pop_enter_email');?>">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="signInputPassword2"><?php echo lang('pop_password');?></label>
+                        <input type="password" class="form-control" id="signInputPassword2" placeholder="<?php echo lang('pop_enter_password');?>">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo lang('pop_close');?></button>
+                <button type="button" class="btn btn-primary"><?php echo lang('pop_signup');?></button>
             </div>
         </div>
     </div>
