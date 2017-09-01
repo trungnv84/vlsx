@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+$_lang = LanguageLoader::getCurrentLanguage('tiny');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownLanguageMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php switch(LanguageLoader::getCurrentLanguage('tiny')) {
+                            <?php switch($_lang) {
                                 case 'en':
                                     echo '<img class="flag" src="https://lipis.github.io/flag-icon-css/flags/4x3/us.svg" alt="US">';
                                     break;

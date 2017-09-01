@@ -25,22 +25,22 @@
             </li>
         </ul> -->
         <div class="ft-link-box">
-            <div class="ft-link"><a href="/en/home">Home</a></div>
-            <div class="ft-link"><a href="/en/choi">Play</a></div>
-            <div class="ft-link"><a href="/en/dai-ly">Win</a></div>
-            <div class="ft-link"><a href="/en/vietlott">Responsibility</a></div>
-            <div class="ft-link"><a href="/en/lien-he">News</a></div>
-            <div class="ft-link"><a href="/en/lien-he">About Vietloot</a></div>
-            <div class="ft-link"><a href="/en/sitemap">Sitemap</a></div>
+            <div class="ft-link"><a href="#"><?php echo lang('nav_home');?></a></div>
+            <div class="ft-link"><a href="#"><?php echo lang('nav_play');?></a></div>
+            <div class="ft-link"><a href="#"><?php echo lang('nav_win');?></a></div>
+            <div class="ft-link"><a href="#"><?php echo lang('nav_responsibility');?></a></div>
+            <div class="ft-link"><a href="#"><?php echo lang('nav_news');?></a></div>
+            <div class="ft-link"><a href="#"><?php echo lang('nav_about');?></a></div>
+            <div class="ft-link"><a href="#"><?php echo lang('nav_sitemap');?></a></div>
         </div>
         <div class="porn-label">
             <span><img src="/public/img/porn-label.png" alt="Game dành cho người trên 8 tuổi"></span>
-            <span><img src="/public/img/alpha.png" alt=""></span> 
+            <span><img src="/public/img/alpha.png" alt=""></span>
             <span><img src="/public/img/porn-label-3.png" alt=""></span>
         </div>
         <div class="ft-copyright">
-            © 2017, Công ty Xổ Số Điện Toán Quốc Tế. <br>
-            Phạm Hùng, Keangnam, Mễ Trì, Cầu Giấy, Hà Nội, Viet Nam
+            <?php echo lang('copyright_com_name');?><br>
+            <?php echo lang('com_address');?>
         </div>
     </div>
 </footer>
